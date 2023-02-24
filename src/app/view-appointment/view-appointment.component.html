@@ -1,0 +1,31 @@
+
+<h1>By Date</h1>
+<input type="text" #date>
+<button (click)="getAppointments(date.value)">Load Appointments</button>
+
+<h1>By Status</h1>
+<input type="text" #status>
+<button (click)="getAppointments2(status.value)">Load Appointments</button>
+
+<h1>By doctor</h1>
+<input type="text" #doctor>
+<button (click)="getAppointments3(doctor.value)">Load Appointments</button>
+
+<h1>By patient</h1>
+<input type="text" #patient>
+<button (click)="getAppointments4(patient.value)">Load Appointments</button>
+
+
+<div *ngFor="let x of allAppointments">
+    <table>
+            <tr>Appointment Id: {{x.appointmentId}}</tr>
+            <tr>Patient Name{{x.patientName}}</tr>
+            <tr>Hospital{{x.hospitalName}}</tr>
+            <tr>Doctor{{x.doctorName}}</tr>
+            <tr>Date: {{x.date}}</tr>
+            <tr>Appointment Status{{x.status}}</tr> 
+            <br/>
+    </table>
+</div>
+
+
